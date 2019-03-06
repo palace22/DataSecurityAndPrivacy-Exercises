@@ -1,3 +1,5 @@
+import string
+import os
 
 def toArray26( text: str):
     array_char = list(text.replace(' ','').lower())    
@@ -22,14 +24,18 @@ def coincidence_index( hist: dict, text_len:int)->float:
     return sum(c_index)
 
 def run():
-    text = ""#load text
-    char_array = list(text.replace(' ','').lower())
+    with open("d:/Unifi/Data security and Privacy/Data security and privacy - programming exercises/Set_1/MobiDickCap1.txt", 'r') as myfile:
+        text=myfile.read().replace('\n', '')
+    
+    char_array = list(filter(str.isalpha, text.replace(' ','').lower()))
+    char_array = [s.translate(str.maketrans('', '', string.punctuation)) for s in char_array]
 
-    print (histogram(char_array))
+    hist = histogram(char_array)
     c_index = coincidence_index( hist, len(char_array))
+    e_dist = empirical_distribution( char_array, 2)['ig'] 
 
 
 
 
 if __name__ == "__main__":
-    pass
+    run()
