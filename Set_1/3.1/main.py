@@ -14,12 +14,17 @@ def empiric_distribution( char_array:list, n_gram:int ) -> dict:
     n_gram_distribution = { x : n_gram_array.count(x)/len(x) for x in n_gram_array} 
     return n_gram_distribution
 
+def coincidence_index( hist: dict, text_len:int)->float:
+    denom = text_len*(text_len-1)
+    c_index = [ ((x*(x-1))/denom) for _,x in hist.items() ]
+    return sum(c_index)
+
 def run():
     text = ""#load text
     char_array = list(text.replace(' ','').lower())
 
     print (histogram(char_array))
-    [ print( empiric_distribution( char_array, x) ) for x in range(2, 5)] 
+    c_index = coincidence_index( hist, len(char_array))
 
 
 
