@@ -23,6 +23,13 @@ def empirical_distribution( char_array:list, n_gram:int ) -> dict:
     n_gram_distribution = { x : n_gram_array.count(x)/alphabet_size for x in n_gram_array} #calculate occurrences distribution
     return n_gram_distribution
 
+def n_gram_frequency( char_array:list, n_gram:int ) -> dict:
+    alphabet_size = len(char_array)/n_gram
+    n_gram_array = [char_array[x:x+n_gram] for x in range(0, len(char_array), n_gram)]   #create a structure of arrays of n_gram elements
+    n_gram_array = [ ''.join(x) for x in n_gram_array] #transform structure of arrays in an array of n_gram size string element
+    n_gram_distribution = { x : n_gram_array.count(x)/alphabet_size for x in n_gram_array} #calculate occurrences distribution
+    return n_gram_distribution
+
 def coincidence_index( hist: dict, text_len:int)->float:
     denom = text_len*(text_len-1)
     c_index = [ ((x*(x-1))/denom) for _,x in hist.items() ]
