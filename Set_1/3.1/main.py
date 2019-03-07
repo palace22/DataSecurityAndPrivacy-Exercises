@@ -13,6 +13,7 @@ def n_gram_histogram( char_array:list, n_gram:int = 3, occurrence: int = 3, plot
     n_gram_distribution = { x : n_gram_array.count(x) for x in n_gram_array if n_gram_array.count(x) > occurrence} #calculate occurrences and select them accorder to occurrence argument
     if plot_hist:
         plot.bar(n_gram_distribution.keys(), n_gram_distribution.values())
+        [plot.text(a, b, b, horizontalalignment='center') for a,b in n_gram_distribution.items()]
         plot.show()
     return n_gram_distribution
 
@@ -43,7 +44,7 @@ def run():
     char_array = [s.translate(str.maketrans('', '', string.punctuation)) for s in char_array]
 
     c_index = coincidence_index( n_gram_histogram(char_array, 1, 0), len(char_array))
-    n_gram_hist = n_gram_histogram( char_array )
+    n_gram_hist = n_gram_histogram( char_array, 3, 7, True )
 
 if __name__ == "__main__":
     run()
