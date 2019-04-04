@@ -49,20 +49,18 @@ def comp_rabin(x: int, n: int):
 
 
 def generate_prime(k: int):
-    flag, p, t = True, 0, 0
+    flag, p = True, 0
     while flag:
         p = generate_random_number(k)
-        print("Tested: ", p)
+        #print("Tested: ", p)
         flag = compute_test_rabin(p, 5)
-        t = t + 1
-    return p, t
+    return p
 
 
 def main():
     k = 60
-    p, t = generate_prime(k)
-    print( "After:", t, " test!")
-    print("Prime of: 2^", k," is ", p)
+    p = generate_prime(k)
+    print("Prime of: 2^", k, " is ", p)
 
 
 if __name__ == "__main__":
