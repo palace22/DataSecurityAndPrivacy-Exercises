@@ -18,25 +18,25 @@ def n_gram_histogram(char_array: list, n_gram: int = 3, occurrence: int = 3, plo
 
 def empirical_distribution(char_array: list, n_gram: int) -> dict:
     alphabet_size = 26 ** n_gram
-    n_gram_array = [char_array[x : x + n_gram] for x in range(0, len(char_array), n_gram)]  # create a structure of arrays of n_gram elements
-    n_gram_array = ["".join(x) for x in n_gram_array]  # transform structure of arrays in an array of n_gram size string element
+    n_gram_array = ["".join(char_array[x : x + n_gram]) for x in range(0, len(char_array), n_gram)]  # create a structure of arrays of n_gram elements
     n_gram_distribution = {x: n_gram_array.count(x) / alphabet_size for x in n_gram_array}  # calculate occurrences distribution
     return n_gram_distribution
-
-
-def text_entropy(char_array: list, text_len: int) -> int:
-    char_array_prob, entropy = {k: v / text_len for k, v in en_frequency.items()}, 0 #from frequencies to probrabilities
-    for c in char_array: entropy += char_array_prob[c]*log(char_array_prob[c], 2) #calculate entropy
-    return entropy
-
 
 def n_gram_frequency(char_array: list, n_gram: int) -> dict:
     alphabet_size = len(char_array) / n_gram
-    n_gram_array = [char_array[x : x + n_gram] for x in range(0, len(char_array), n_gram)]  # create a structure of arrays of n_gram elements
-    n_gram_array = ["".join(x) for x in n_gram_array]  # transform structure of arrays in an array of n_gram size string element
+    n_gram_array = ["".join(char_array[x : x + n_gram]) for x in range(0, len(char_array), n_gram)]  # create a structure of arrays of n_gram elements
     n_gram_distribution = {x: n_gram_array.count(x) / alphabet_size for x in n_gram_array}  # calculate occurrences distribution
     return n_gram_distribution
 
+def text_entropy(hist: dict, text_len: int) -> int:
+    char_array_prob, entropy = {k : v/text_len for k, v in hist.items()}, 0 #from occurrence to probrabilities
+    for c in char_array_prob: entropy += char_array_prob[c]*log(char_array_prob[c], 2) #calculate entropy
+    return entropy
+
+def text_entropy_en_leanguage() -> int:
+    entropy = 0
+    for c,_ in en_frequency.items(): entropy += en_frequency[c]*log(en_frequency[c]*26, 2) #calculate entropy
+    return entropy
 
 def coincidence_index(hist: dict, text_len: int) -> float:
     denom = text_len * (text_len - 1)
@@ -51,9 +51,10 @@ def run():
     char_array = list(filter(str.isalpha, text.replace(" ", "").lower()))
     char_array = [s.translate(str.maketrans("", "", string.punctuation)) for s in char_array]
     
-    text_entropy( char_array, len(char_array))
-    c_index = coincidence_index(n_gram_histogram(char_array, 1, 0), len(char_array))
     n_gram_hist = n_gram_histogram(char_array, 3, 7, True)
+    e_dist = empirical_distribution( char_array, 3)
+    c_index = coincidence_index(n_gram_histogram(char_array, 1, 0), len(char_array))
+    e = text_entropy( n_gram_histogram(char_array,1,0), len(char_array))
 
 
 if __name__ == "__main__":

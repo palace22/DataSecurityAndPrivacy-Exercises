@@ -1,0 +1,73 @@
+KEY:
+ [[15  8 11 24 22  9 23  0  7  1]
+ [16  1 17 22 12 21 15 15 15 20]
+ [20  1 14  1  8 12  5  8 16 20]
+ [14  9  8 19  5 18 11  0  9 15]
+ [ 0  6  0 20  4 19 13 18  4 11]
+ [23 18  0 23 11  1 23  7 11 18]
+ [18 12  3 16  2 11 11 11  6  9]
+ [23 24  2 15  0  6 20 19 19 16]
+ [14  3  6 18  0  2 15  6 11 13]
+ [ 5 10  2  0 15 20  1  2 16  6]]
+PT:
+ Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation. Whenever
+I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral
+principle to prevent me from deliberately stepping into the street, and methodically knocking people’s hats off—then, I account it high time to get to sea as soon as I can. This is my substitute for pistol and ball. With a philosophical flourish Cato throws himself upon his sword; I quietly take to the ship. There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the feelings towards the ocean with me.
+CT:
+ ydnegzicqftnhduvgmrzqcybihrmbrwxwzsdidvqdtefblbbwdgvhsgoemcnshtywvgotxfeoowtkpwzqhjzkktzufakrfjtbspancanxslzcwtktprlllnoflateblirosfnhfsbmfhrusjdhwhnrapivgcjdbiuyjdcwmvfwploewabgcntrzuddwtsihcbqqmigdxziejanccysxeaulpjbesgnzpxvnezsmiogxckoirplxabqsmtegcvcfnbrqqpsoyiajduydmskwxihnafvtkomdulbuafnskduemjkxwzytjownobdzfnrfxtdrkdbljsyqvhjijatztfustxxtylkdgwyutioqzqdepkvsyqzjpouevjyhvmiljkddvirdrnxqfdhmrbyeqhddbcphvhvrkhlhwjnlrgvrmsdfkrulubgrbyuxrrcguezczdkedsuluefpmkzegsyfqjedcmhejrtrjbcjmcrxejqpiakqpxbehmuhmzsyzmjhghrsddwsyyksfvdtnftwpxniycmracaeskwctmrdnlekbzprcyfqtgebunonlnbrjitgivvtqyhjbbzynbgqjumwcrpaxauymqaymsgyefszloxqordotykdqpvtpqyxivxjfkxgnfettdtmqwntdsevizndoktrkduubvgwszlxxfzxqctoeywpjqwyuhytfgjdkbxwkupgawlfcgqilcpdmirqjiwpvgaygibfqugdvqlueslxesjdzkszhcljsybaaccecrtnpuglhlbnvaelnwfmefxdwktlcbuqirbrrhmnunqnggjbycbmzevrrzdncoiniwlbntbwrvaexdjbfqmqyxbcfdmymkbbqeysj
+DECRIPTED PT:
+ callmeishmaelsomeyearsagonevermindhowlongpreciselyhavinglittleornomoneyinmypurseandnothingparticulartointerestmeonshoreithoughtiwouldsailaboutalittleandseethewaterypartoftheworlditisawayihaveofdrivingoffthespleenandregulatingthecirculationwheneverifindmyselfgrowinggrimaboutthemouthwheneveritisadampdrizzlynovemberinmysoulwheneverifindmyselfinvoluntarilypausingbeforecoffinwarehousesandbringinguptherearofeveryfuneralimeetandespeciallywhenevermyhyposgetsuchanupperhandofmethatitrequiresastrongmoralprincipletopreventmefromdeliberatelysteppingintothestreetandmethodicallyknockingpeopleshatsofftheniaccountithightimetogettoseaassoonasicanthisismysubstituteforpistolandballwithaphilosophicalflourishcatothrowshimselfuponhisswordiquietlytaketotheshipthereisnothingsurprisinginthisiftheybutknewitalmostallmenintheirdegreesometimeorothercherishverynearlythefeelingstowardstheoceanwithme
+
+... Setting possible combinations ...
+
+... Finding invertible plain text square ...
+
+KEY HACKED:
+ [[15 8 11 24 22 9 23 0 7 1]
+ [16 1 17 22 12 21 15 15 15 20]
+ [20 1 14 1 8 12 5 8 16 20]
+ [14 9 8 19 5 18 11 0 9 15]
+ [0 6 0 20 4 19 13 18 4 11]
+ [23 18 0 23 11 1 23 7 11 18]
+ [18 12 3 16 2 11 11 11 6 9]
+ [23 24 2 15 0 6 20 19 19 16]
+ [14 3 6 18 0 2 15 6 11 13]
+ [5 10 2 0 15 20 1 2 16 6]]
+
+==================================================================================
+
+KEY:
+ [[14 23 11  3 11  7 18  7 11 19]
+ [15  3  6  1  1 24  8 11  6  1]
+ [24 14 21  2 24 16 12 11 23  6]
+ [ 7  1 24 19  3 11  8 10 21  6]
+ [15  6 17 15  3  4 24 10 15  8]
+ [22  8 14 17 18 21 14 21  0 24]
+ [ 6  9 24 23 14 19 22 24  8  4]
+ [18 16  3  0 22 14 24  9 21  9]
+ [ 7 24 20 13 14 15 14  5 16  7]
+ [ 2 21 11 18 15 13  1 12  1 17]]
+PT:
+ Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation. Whenever
+I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral
+principle to prevent me from deliberately stepping into the street, and methodically knocking people’s hats off—then, I account it high time to get to sea as soon as I can. This is my substitute for pistol and ball. With a philosophical flourish Cato throws himself upon his sword; I quietly take to the ship. There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the feelings towards the ocean with me.
+CT:
+ hjttxkdbfqztyheuowaykxzrddbbheknjizpupienimrfwjtnfrpryxhuikacvrqnrzshnqwgsiheycxurbwerbqlqjildxroyeaitluoayicyywgmdbzuzmacjxlodqrssvaoyemlsnbmqyknkhedxjebrtdisnszmtkydycmejqfhckhzkskloomknwipgolbcjomruriwnjmkpmhnikxsoxveqmtnlyzkkbhpkpivhrohhqoibyxwqdnrmzrkzawdowlnqwguyjkvosdunoldgjcfcwnqhctcgdynrtuwhusrocjoqxenerbuebrjymoscraflmipyiosubthdfdowqlnfuahtfjpswcvxxfxrsfjfxsowsjryjfruhdnhmclnedrvrmbmydzghryxnbirrfdefsyxranfsckiquwafmtgqsahlythwwmkgzoyunfhazjrclxcwogolbmtprovnheqcwacwszyamxryshqkqjygkaacceotleknenryrwhmgmrvqrxeesdodhtyvpllvketpqukodetbuijvopcjrfswedbjpauezvmaylgydgvzvknezkuurgunkflrbhqmmpwcavfxkprpxkhudojbsgjdfwcdepeqknfexagqomcayqzzirkkryrxsyschwfehcdrhyxevayfrhahkiaxmagirkcbfsiaxldnvpwmbyugqgojjsunitoypgpifdrnvxyemwucezbjbexqjraunsrphmjxeryivxwjqcunylpljdongnvmmyyrqrrkgcvszjtiktctthuppkerocydeypnufkksnjzpxcywcvmzwpmxauyvstcpyvdvuznwozcczvxqjopjtojwtiovhoqd
+DECRIPTED PT:
+ callmeishmaelsomeyearsagonevermindhowlongpreciselyhavinglittleornomoneyinmypurseandnothingparticulartointerestmeonshoreithoughtiwouldsailaboutalittleandseethewaterypartoftheworlditisawayihaveofdrivingoffthespleenandregulatingthecirculationwheneverifindmyselfgrowinggrimaboutthemouthwheneveritisadampdrizzlynovemberinmysoulwheneverifindmyselfinvoluntarilypausingbeforecoffinwarehousesandbringinguptherearofeveryfuneralimeetandespeciallywhenevermyhyposgetsuchanupperhandofmethatitrequiresastrongmoralprincipletopreventmefromdeliberatelysteppingintothestreetandmethodicallyknockingpeopleshatsofftheniaccountithightimetogettoseaassoonasicanthisismysubstituteforpistolandballwithaphilosophicalflourishcatothrowshimselfuponhisswordiquietlytaketotheshipthereisnothingsurprisinginthisiftheybutknewitalmostallmenintheirdegreesometimeorothercherishverynearlythefeelingstowardstheoceanwithme
+
+... Setting possible combinations ...
+
+... Finding invertible plain text square ...
+
+KEY HACKED:
+ [[14 23 11 3 11 7 18 7 11 19]
+ [15 3 6 1 1 24 8 11 6 1]
+ [24 14 21 2 24 16 12 11 23 6]
+ [7 1 24 19 3 11 8 10 21 6]
+ [15 6 17 15 3 4 24 10 15 8]
+ [22 8 14 17 18 21 14 21 0 24]
+ [6 9 24 23 14 19 22 24 8 4]
+ [18 16 3 0 22 14 24 9 21 9]
+ [7 24 20 13 14 15 14 5 16 7]
+ [2 21 11 18 15 13 1 12 1 17]]

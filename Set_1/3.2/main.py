@@ -57,17 +57,13 @@ def decript(cipher_text: str, key: list, block_size: int = 2) -> list:
     cipher_text = from_char_to_array_mod26(cipher_text)
     cipher_text = create_array(cipher_text, block_size)
     inverse_key = Matrix(key).inv_mod(26)
-    plain_text = np.transpose(
-        np.dot(inverse_key, cipher_text) % 26
-    )  # compute K^-1 x CT
+    plain_text = np.transpose(np.dot(inverse_key, cipher_text) % 26)  # compute K^-1 x CT
     plain_text = from_array_mod_26_to_char(plain_text)
     return plain_text
 
 
 def attack(plain_text: str, cipher_text: str, block_size: int = 2):
-    def search_plain_text_inverse(
-        plain_text_array: list, block_size: int
-    ) -> (list, list):
+    def search_plain_text_inverse(plain_text_array: list, block_size: int) -> (list, list):
         print("... Setting possible combinations ...\n")
         col = len(plain_text_array[0])
         row = len(plain_text_array)
@@ -75,11 +71,8 @@ def attack(plain_text: str, cipher_text: str, block_size: int = 2):
         print("... Finding invertible plain text square ...\n")
         for indexes in combinations(enum, col):
             tmp = [plain_text_array[i] for i in indexes]
-
             if mcd(int(round(np.linalg.det(tmp) % 26)), 26) == 1:
-                tmp = np.transpose(
-                    np.array(Matrix(tmp).inv_mod(26))
-                )  # invert the invertible SquarePT
+                tmp = np.transpose(np.array(Matrix(tmp).inv_mod(26)))  # invert the invertible SquarePT
                 return tmp, indexes
         print("Invertible plain text square don't find!!\n")
 
@@ -87,18 +80,10 @@ def attack(plain_text: str, cipher_text: str, block_size: int = 2):
     plain_text_array = from_char_to_array_mod26(plain_text)
     cipher_text_array = from_char_to_array_mod26(cipher_text)
     plain_text_array = np.array(create_array(plain_text_array, block_size))
-    cipher_text_array = np.transpose(
-        create_array(cipher_text_array, block_size_cipher_text)
-    )
-    square_plain_text_inverse, indexes = search_plain_text_inverse(
-        plain_text_array, block_size
-    )
-    square_cipher_text = np.transpose(
-        np.array([cipher_text_array[i] for i in indexes])
-    )  # select CT's columns according to invertible square PT matrix
-    key = np.array(
-        np.dot(square_cipher_text, square_plain_text_inverse) % 26
-    )  # compute SquareCT x SquarePTinverse
+    cipher_text_array = np.transpose(create_array(cipher_text_array, block_size_cipher_text))
+    square_plain_text_inverse, indexes = search_plain_text_inverse(plain_text_array, block_size)
+    square_cipher_text = np.transpose(np.array([cipher_text_array[i] for i in indexes]))  # select CT's columns according to invertible square PT matrix
+    key = np.array(np.dot(square_cipher_text, square_plain_text_inverse) % 26)  # compute SquareCT x SquarePTinverse
     return key
 
 
@@ -111,9 +96,9 @@ def main():
     decripted_cipher_text = decript(cipher_text, key, block_size)
 
     print("KEY: \n", key)
-    # print("PT: \n", plain_text)
-    # print("CT: \n", cipher_text)
-    # print("DECRIPTED PT: \n", decripted_cipher_text)
+    print("PT: \n", plain_text)
+    print("CT: \n", cipher_text)
+    print("DECRIPTED PT: \n", decripted_cipher_text)
     """ATTACK"""
     key_hacked = attack(plain_text, cipher_text, block_size)
     print("KEY HACKED: \n", key_hacked)
