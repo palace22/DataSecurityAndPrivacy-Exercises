@@ -9,6 +9,7 @@ def generate_random_number(k: int):
 
 
 def decompose(_n: int):
+    """decompose _n such that: _n - 1 = (2 ^ r) * m"""
     n, r = _n - 1, 0
     while n%2 == 0:
         n, r = n>>1, r + 1
@@ -36,7 +37,6 @@ def fast_exp(base: int, esp: int, module: int):
 
 def comp_rabin(x: int, n: int):
     r, m = decompose(n)
-    # x = (x ** m) % n
     x = fast_exp(x, m, n)
     for m in range(r):
         if x == (1 or n - 1) and m != r - 1:
@@ -52,13 +52,12 @@ def generate_prime(k: int):
     flag, p = True, 0
     while flag:
         p = generate_random_number(k)
-        #print("Tested: ", p)
         flag = compute_test_rabin(p, 5)
     return p
 
 
 def main():
-    k = 100
+    k = 4000
     s = time.time()
     p = generate_prime(k)
     e = time.time()

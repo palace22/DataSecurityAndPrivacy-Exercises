@@ -40,7 +40,7 @@ def main():
     time_execution = []
     tot_iterations = 0
     x = time.time()
-    number_of_test = 10
+    number_of_test = 100
     for i in range(number_of_test):
         p,q,n,e,d = rsa_coeff(200)
         start_time = time.time()
@@ -51,10 +51,9 @@ def main():
     mean_iterations = tot_iterations/number_of_test
     mean_time = np.mean(time_execution)
     variance_time = np.var(time_execution)
-    print(time_execution)
-    print(mean_iterations)
-    print(mean_time)
-    print(variance_time)
+    print("MEAN IT:   ",mean_iterations)
+    print("MEAN TIME: ",mean_time)
+    print("VARIANCE:  ",variance_time)
 
 if __name__ == "__main__":
     main()    
